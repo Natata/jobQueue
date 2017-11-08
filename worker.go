@@ -25,9 +25,9 @@ func (w *Worker) Run() {
 		case job := <-w.jobChan:
 			err := job.execute()
 			if err != nil {
-				log.Printf("job %v execute fail: %v", job.id, err)
+				log.Printf("[worker] job %v execute fail: %v", job.id, err)
 			}
-			log.Printf("job %v execute success", job.id)
+			log.Printf("[worker] job %v execute success", job.id)
 		}
 	}
 }

@@ -1,7 +1,6 @@
 package jobQueue
 
 import (
-	"fmt"
 	"log"
 )
 
@@ -23,8 +22,6 @@ func (jq *JobQueue) Enqueue(j *Job) error {
 	select {
 	case jq.queue <- j:
 		log.Printf("enqueue job: %v", j.id)
-	default:
-		return fmt.Errorf("fail to enqueue job %v, the queue is full", j.id)
 	}
 
 	return nil
