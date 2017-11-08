@@ -1,4 +1,4 @@
-package jq
+package jobQueue
 
 // Dispatcher dispatch jobs to idol workers
 type Dispatcher struct {

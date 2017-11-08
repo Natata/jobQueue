@@ -1,4 +1,4 @@
-package jq
+package jobQueue
 
 import (
 	"sync"

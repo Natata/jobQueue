@@ -1,4 +1,4 @@
-package jq
+package jobQueue
 
 // Job is the basic unit for a request
 type Job struct {
